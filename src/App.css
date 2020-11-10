@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* header */
+header{
+  width: 100%;
+  background: #222;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hamburgerIcon{
+  color: white;
+  margin: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* nav */
+nav{
+  position: absolute;
+  height: 100%;
+  z-index: 1000;
+  background : #eee;
+  width: 20%;
+  border-right: 1px solid #eee;
+}
+
+/* todos & todoList*/
+li{
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: default;
+}
+
+li:hover{
+  background: #EEE;
+}
+
+.checkbox{
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 3px solid darkorange;
+  margin: 0px 10px;
+  border-radius: 20px;
+}
+
+.checkbox:hover{
+  cursor: pointer;
+  background-color: orange;
+}
+
+/* form */
+
+button, input[type=submit]{
+  width: 140px;
+  height: 35px;
+  margin: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#addBtn{
+  width: 200px;
+}
+
+form{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: #eee;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type=submit]{
+  background-color: darkorange;
 }
+
+.todoInput{
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+}
+
